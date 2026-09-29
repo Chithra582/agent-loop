@@ -1,0 +1,17 @@
+name: "sandbox-boundary-enforcer"
+description: "Verifies command execution security and enforces containerized sandbox containment."
+input_schema:
+  type: "object"
+  properties:
+    command:
+      type: "string"
+      description: "Shell command string proposed for execution."
+    sandbox_backend:
+      type: "string"
+      description: "Sandbox isolation backend (gondolin, docker, openshell, none)."
+    working_directory:
+      type: "string"
+      description: "Target directory within the sandbox environment."
+  required:
+    - "command"
+    - "sandbox_backend"

@@ -1,0 +1,62 @@
+spec_version: "0.1.0"
+name: "pi-agent-harness"
+version: "1.0.0"
+description: >
+  Interactive coding agent harness and extensible tool runtime with multi-provider LLM support,
+  durable task state, differential TUI rendering, and sandboxed execution boundaries.
+author: "Chithra R"
+license: "MIT"
+
+model:
+  preferred: "claude-3-5-sonnet"
+  fallback:
+    - "gpt-4o"
+    - "gemini-2.0-flash"
+  constraints:
+    temperature: 0.1
+    max_tokens: 8192
+
+skills:
+  - interactive-coding-agent-orchestrator
+  - multi-provider-llm-router
+  - durable-state-transaction-manager
+  - containerized-sandbox-guard
+
+tools:
+  - tool-invocation-dispatcher
+  - llm-provider-selector
+  - session-state-persister
+  - sandbox-boundary-enforcer
+
+runtime:
+  max_turns: 25
+  temperature: 0.1
+  timeout: 300
+
+compliance:
+  risk_tier: standard
+  frameworks:
+    - mitre-atlas
+    - owasp-llm
+  data_governance:
+    pii_handling: redact
+    data_classification: confidential
+  recordkeeping:
+    audit_logging: true
+    log_format: structured_json
+  supervision:
+    human_in_the_loop: conditional
+    override_capability: true
+    kill_switch: true
+
+tags:
+  - developer-tools
+  - coding-agent
+  - agent-harness
+  - tool-calling
+  - multi-provider-llm
+  - durable-execution
+
+metadata:
+  domain: "developer-tools"
+  category: "Developer Tools"

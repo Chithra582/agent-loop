@@ -1,0 +1,17 @@
+name: "llm-provider-selector"
+description: "Selects and configures optimal LLM backends and parameters for tasks."
+input_schema:
+  type: "object"
+  properties:
+    provider:
+      type: "string"
+      description: "Selected LLM provider (anthropic, openai, google, local)."
+    model:
+      type: "string"
+      description: "Model identifier string."
+    temperature:
+      type: "number"
+      description: "Sampling temperature for generation."
+  required:
+    - "provider"
+    - "model"

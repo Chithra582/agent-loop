@@ -1,0 +1,17 @@
+name: "tool-invocation-dispatcher"
+description: "Dispatches validated agent actions and file modifications within workspace bounds."
+input_schema:
+  type: "object"
+  properties:
+    tool_name:
+      type: "string"
+      description: "Name of the tool to invoke."
+    action_type:
+      type: "string"
+      description: "Type of action (read, write, execute, inspect)."
+    parameters:
+      type: "object"
+      description: "Key-value parameters matching the tool schema."
+  required:
+    - "tool_name"
+    - "action_type"

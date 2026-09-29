@@ -1,0 +1,17 @@
+name: "session-state-persister"
+description: "Persists conversation transcripts and checkpoint state records to durable storage."
+input_schema:
+  type: "object"
+  properties:
+    session_id:
+      type: "string"
+      description: "Unique identifier for the agent session."
+    state_payload:
+      type: "object"
+      description: "Serialized session state and checkpoint metadata."
+    checkpoint_tag:
+      type: "string"
+      description: "Human-readable tag for this checkpoint."
+  required:
+    - "session_id"
+    - "state_payload"
